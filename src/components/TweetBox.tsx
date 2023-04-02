@@ -1,17 +1,16 @@
 import { CalendarIcon, FaceSmileIcon, MagnifyingGlassCircleIcon, MapPinIcon, PhotoIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import React, { useState } from 'react'
-import chlogo from '../images/chlogo.jpg'
+import anonlogo from '../images/anon-logo.png'
 
 function TweetBox() {
     const [input, setInput] = useState<string>('')
-
 
   return (
     <div className='flex space-x-2 p-5'>
         <Image
         className='mt-4 h-14 w-14 rounded-full object-cover'
-        src={chlogo}
+        src={anonlogo}
         alt=''
         height={100}
         width={100}
