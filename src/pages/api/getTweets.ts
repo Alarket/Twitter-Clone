@@ -2,7 +2,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { sanityClient } from '../../../sanity'
 import { Tweet } from '../../../typings'
-import {groq} from 'next-sanity'
+import { groq } from 'next-sanity'
 
 const feedQuery = groq`
 *[_type == "tweet" && !blockTweet] {

@@ -3,6 +3,7 @@ import Sidebar from '@/components/Sidebar'
 import Widgets from '@/components/Widgets'
 import { GetServerSideProps } from 'next'
 import Head from 'next/head'
+import { Toaster } from 'react-hot-toast'
 import { Tweet } from '../../typings'
 import { fetchTweets } from '../../utils/fetchTweets'
 
@@ -18,6 +19,7 @@ export default function Home({tweets}: Props) {
         <title>Twitter 2.0</title>
         <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/1245px-Twitter-logo.svg.png"></link>
       </Head>
+      <Toaster />
 
       <main className='grid grid-cols-9'>
         <Sidebar />
