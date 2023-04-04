@@ -3,8 +3,10 @@ import React from 'react'
 import twitterlogo from '../images/twitter-logo.png'
 import SidebarRow from './SidebarRow'
 import {BellIcon, BookmarkIcon, EllipsisHorizontalCircleIcon, EnvelopeIcon, HashtagIcon, HomeIcon, ListBulletIcon, UserIcon} from '../../node_modules/@heroicons/react/24/outline'
+import { signIn, signOut, useSession } from 'next-auth/react'
 
 function SideBar() {
+  const {data: session} = useSession()
   return (
     <div className='col-span-2 flex flex-col items-center px-4 md:items-start'>
         <Image 
@@ -20,7 +22,7 @@ function SideBar() {
         <SidebarRow Icon={EnvelopeIcon} title='Messages'/>
         <SidebarRow Icon={BookmarkIcon} title='Bookmarks'/>
         <SidebarRow Icon={ListBulletIcon} title='Lists'/>
-        <SidebarRow Icon={UserIcon} title='Sign In'/>
+        <SidebarRow onClick={session ? signOut : signIn} Icon={UserIcon} title={session ? 'Sign Out':'Sign In'}/>
         <SidebarRow Icon={EllipsisHorizontalCircleIcon} title='More'/>
     </div>
   )
