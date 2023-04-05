@@ -62,7 +62,7 @@ function TweetBox({setTweets}: Props) {
 
   return (
     <div className='flex space-x-2 p-5'>
-        <img
+        <Image
         className='mt-4 h-14 w-14 rounded-full object-cover'
         src={session?.user?.image || 'https://w7.pngwing.com/pngs/753/432/png-transparent-user-profile-2018-in-sight-user-conference-expo-business-default-business-angle-service-people-thumbnail.png'}
         alt=''

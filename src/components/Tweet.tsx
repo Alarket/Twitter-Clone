@@ -61,7 +61,7 @@ function Tweet({ tweet }: Props) {
           className="flex flex-col space-x-3 border-y border-gray-100 p-5"
         >
           <div className="flex space-x-3">
-            <img
+            <Image
               className="h-10 w-10 rounded-full object-cover"
               src={tweet.profileImage || 'https://w7.pngwing.com/pngs/753/432/png-transparent-user-profile-2018-in-sight-user-conference-expo-business-default-business-angle-service-people-thumbnail.png'}
               alt=""
@@ -83,7 +83,7 @@ function Tweet({ tweet }: Props) {
               <p className="pt-1">{tweet.text}</p>
     
               {tweet.image && (
-                <img
+                <Image
                   src={tweet.image}
                   className="m-5 ml-0 mb-1 max-h-60 rounded-lg object-cover shadow-sm"
                   alt=""
@@ -135,7 +135,7 @@ function Tweet({ tweet }: Props) {
               {comments.map((comment) => (
                 <div key={comment._id} className="relative flex space-x-2">
                   <hr className="absolute left-5 top-10 h-8 border-x border-twitter/30" />
-                  <img
+                  <Image
                     src={comment.profileImage}
                     className="mt-2 h-7 w-7 rounded-full object-cover"
                     alt=""
