@@ -9,7 +9,7 @@ function Widgets() {
             <MagnifyingGlassIcon className='h-5 w-5 text-gray-400'/>
             <input type='text' placeholder='Search Twitter' className='flex-1 bg-transparent outline-none'/>
         </div>
-
+        
         <TwitterTimelineEmbed
         sourceType='profile'
         screenName='cyberhorizon1'
